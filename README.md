@@ -1,24 +1,22 @@
-# README
+# Take home question
+The goal of this question is for you to spin up a scalable testing environment. To do this, you're going to need
+a bit of sysadmin knowledge and a bit of testing knowledge.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app will "hello world" when hit at the "/" path.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+# SUMMARY
 
-* Configuration
+## I used Docker container to boot 6 environments with and Python script to run tests and checks for the configuration
 
-* Database creation
 
-* Database initialization
+## Files modified/added
+ 1. Dockerfile - to create a new image
+ 2. docker-compose.yaml - to compose containers with desired configuration.
+ 3. docker_manager.py  - to run checks and tests
+ 4. deploy.sh - to create an image, start containers, start tests
 
-* How to run the test suite
+## Video
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I recorded a [video](https://www.youtube.com/watch?v=bJm0_WoyOZc&feature=youtu.be) with detailed explanation on how this project works.

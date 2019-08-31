@@ -1,0 +1,62 @@
+version: '3'
+services:
+  web1:
+    image: "test1"
+    ports:
+      - "3001:3000"
+    command: rails server
+    networks:
+      - web1
+
+  web2:
+    image: "test1"
+    ports:
+      - "3002:3000"
+    networks:
+      - web2
+
+  web3:
+    image: "test1"
+    ports:
+      - "3004:3000"
+    command: rails server
+    networks:
+      - web3
+
+  web4:
+    image: "test1"
+    ports:
+      - "3005:3000"
+    command: rails server
+    networks:
+      - web4
+
+
+  web5:
+    image: "test1"
+    ports:
+      - "3000:3000"
+    command: rails server
+    networks:
+      - web5
+
+
+  master:
+    image: "test1"
+    ports:
+      - "3003:3000"
+    command: rails server
+    networks:
+      - web1
+      - web2
+      - web3
+      - web4
+      - web5
+
+networks:
+  web1:
+  web2:
+  web3:
+  web4:
+  web5:
+
